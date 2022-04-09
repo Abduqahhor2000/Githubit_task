@@ -1,0 +1,42 @@
+.App {
+    position: relative;
+    background-color: #E5E5E5;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+.site-menu{
+    position: absolute;
+    width: 275px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media (max-width: 1200px) {
+        &{
+            display: none;
+        }
+    }
+}
+
+.site-mean{
+    position: absolute;
+    width: calc(100% - 275px);
+    height: 100vh;
+    background-color: rgb(198, 99, 99);
+    transition: 0.8s;
+    top: 0;
+    right: 0;
+
+    @media (max-width: 1200px) {
+        &{
+            width: 100%;
+            transition: 0.8s;
+        }
+    }
+}
