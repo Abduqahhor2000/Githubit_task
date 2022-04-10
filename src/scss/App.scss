@@ -1,6 +1,11 @@
+*, *::after, *::before{
+    font-family: 'Inter', sans-serif;
+}
+
+
 .App {
     position: relative;
-    background-color: #E5E5E5;
+    background-color: rgb(236, 239, 243);
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -9,17 +14,18 @@
 .site-menu{
     position: absolute;
     width: 275px;
-    height: 100vh;
     top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    transition: 0.2s;
 
     @media (max-width: 1200px) {
         &{
             display: none;
+            transition: 0.2s;
         }
     }
 }
@@ -28,15 +34,15 @@
     position: absolute;
     width: calc(100% - 275px);
     height: 100vh;
-    background-color: rgb(198, 99, 99);
-    transition: 0.8s;
+    transition: 0.5s;
     top: 0;
     right: 0;
 
     @media (max-width: 1200px) {
         &{
             width: 100%;
-            transition: 0.8s;
+            transition: 0.5s;
+            padding-left: 12px;
         }
     }
 }

@@ -3,6 +3,7 @@
 .menu-header {
     width: 250px;
     height: 60px;
+    min-height: 60px;
     background-color: white;
     border-radius: 10px;
     margin: 12px;
@@ -26,23 +27,55 @@
 
 .menu-mean {
     width: 250px; 
-    height: 800px;
     display: flex;
     justify-content: flex-start;
+    height: calc(100vh - 96px);
     flex-direction: column;
     align-items: center;
     margin: 0 12px 12px;
     border-radius: 10px;
     background-color: white;
     box-shadow: 0px 2px 2px rgba(223, 226, 235, 0.79);
+    overflow-y: auto;
+    overflow-x: unset;
+
+
+    &::-webkit-scrollbar-track{
+    	border-radius: 0 10px 10px 0;
+    }
+    
+    &::-webkit-scrollbar
+    {
+    	width: 10px;
+    	background-color: #F5F5F5;
+        border-radius:0 10px 10px 0;
+    }
+    
+    &::-webkit-scrollbar-thumb
+    {
+    	border-radius: 0 10px 10px 0;
+    	background-image: -webkit-gradient(linear,
+    									   left bottom,
+    									   left top,
+    									   color-stop(0.44, rgb(122,153,217)),
+    									   color-stop(0.72, rgb(73,125,189)),
+    									   color-stop(0.86, rgb(28,58,148)));
+    }
+    
+    
+
+
+
     .user-console{
         width: 100%;
         margin-top: 35px;
+
         .user-header{
             width: 100%;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+
             .user-img{
                 display: block;
                 background-image: url("../png/user.jpg");
@@ -50,6 +83,183 @@
                 height: 64px;
                 background-repeat: no-repeat;
                 background-size: cover; 
+            }
+        }
+
+        .user-info{
+            margin-top: 15px;
+
+            .user-name{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+
+                span:nth-child(1){
+                    font-size: 18px;
+                    font-weight: 600;
+                    font-family: 'Inter', sans-serif;
+                }
+                span:nth-child(2){
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: 'Inter', sans-serif;
+                    line-height: 25px;
+                }
+            }
+
+            .user-wallet{
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+
+                .wallet-quality{
+                    width: 180px;
+                    height: 85px;
+                    border-radius: 10px;
+                    background-color: #e4e4e485;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 18px;
+
+                    .balans{
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        flex-direction: column;
+
+                        span:nth-child(1){
+                            font-size: 14px;
+                            font-family: 'Inter', sans-serif;
+                        }
+                        span:nth-child(2){
+                            font-size: 20px;
+                            font-weight: 700;
+                            line-height: 25px;
+                            font-family: 'Inter', sans-serif;
+                        }
+                    }
+
+                    span{
+                        margin-top: 3px;
+                    }
+                }
+
+                .wallet-addres{
+                    width: 180px;
+                    height: 40px;
+                    border-radius: 10px;
+                    background-color:rgb(242 99 16 / 25%);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 25px;
+                    margin-top: 5px;
+
+                    span:nth-child(1){
+                        margin-top: 3px;
+                    }
+                    span:nth-child(2){
+                        font-family: 'Inter', sans-serif;
+                        color: #F26110;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    .menu-list{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 180px;
+        margin-top: 30px;
+
+        .nodistant{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 100%;
+
+            .active-menu{
+                span:nth-child(2){
+                    font-weight: 600;
+                    color: black !important;
+                }
+            }
+
+            .menu-item{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-direction: row;
+                width: 100%;
+                margin-bottom: 15px;
+                font-family: 'Inter', sans-serif;
+
+                span:nth-child(1){
+                    margin-top: 3px;
+                    margin-right: 25px;
+                }
+                span:nth-child(2){
+                    font-size: 16px;
+                    color: rgb(0 0 0 / 50%);
+                }
+            }
+        }
+
+        .distant{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-top: 30px;
+            width: 100%;
+
+            .line{
+                width: 100%;
+                height: 1px;
+                background-color: rgb(0 0 0 / 30%);
+                margin-bottom: 10px;
+            }
+
+            .active-menu{
+                span:nth-child(2){
+                    font-weight: 600;
+                    color: black !important;
+                }
+            }
+
+            .menu-item{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex-direction: row;
+                margin-bottom: 15px;
+                position: relative;
+                width: 100%;
+                font-family: 'Inter', sans-serif;
+
+                span:nth-child(1){
+                    margin-top: 3px;
+                    margin-right: 25px;
+                }
+                span:nth-child(2){
+                    font-size: 16px;
+                    color: rgb(0 0 0 / 50%);
+                }
+                span:nth-child(3){
+                    margin-left: 20px;
+                    font-size: 18px;
+                    margin-top: 3px;
+                    position: absolute;
+                    right: 0;
+                }
             }
         }
     }
