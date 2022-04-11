@@ -1,37 +1,14 @@
 import React from "react";
-import { mean_dateIcon, mean_deliveryIcon, mean_dottedIcon, mean_infoIcon, mean_locationIcon, mean_loc_selectIcon, mean_nextIcon, mean_recipesIcon, mean_salesIcon, mean_savedIcon, mean_searchIcon, mean_searchSettingIcon, mean_setIcon, mean_shopIcon, mean_starIcon } from "../svg/svg-icons";
+import { mean_dateIcon, mean_deliveryIcon, mean_dottedIcon, mean_infoIcon, mean_locationIcon, mean_loc_selectIcon, mean_nextIcon, mean_recipesIcon, mean_salesIcon, mean_savedIcon, mean_searchIcon, mean_searchSettingIcon, mean_setIcon, mean_shopIcon, mean_starIcon, product_likeIcon, product_prasentIcon } from "../svg/svg-icons";
 import "../scss/Mean.scss"
 import banner_logo from "../png/banner_logo.png"
-import fruits from "../png/card_fruits.png"
-import vegetables from "../png/card_vegetable.png"
-import tomato from "../png/card_tomato.png"
-import orange from "../png/card_orange.png"
-import pasta from "../png/card_orange.png"
+import { cards, selectMenu, productMenu } from "../JSON/jsonFile";
 
-const cards = [
-    {id: 0, name: "Sale Orange", text: "Promocode down", button: true, buttonText: "ORANGE20", href: "/", img: orange, theme:"rgba(255, 109, 3, 1)"},
-    {id: 1, name: "Tomato", text: "Buy at affordable prices", button: false, buttonText: "", href: "/", img: tomato, theme:"rgba(227, 65, 38, 1)"},
-    {id: 2, name: "Sale 40%", text: "Very tasty pasta", button: true, buttonText: "FOOD40", href: "/", img: pasta, theme:"rgba(162, 190, 0, 1)"},
-    {id: 3, name: "Collection", text: "Sale full Pack", button: true, buttonText: "COLLECT", href: "/", img: vegetables, theme:"rgba(47, 140, 246, 1)"},
-    {id: 4, name: "Fruit 25%", text: "Very tasty pasta", button: true, buttonText: "TEST40", href: "/", img: fruits, theme:"rgba(119, 83, 246, 1)"},
-    {id: 5, name: "Sale 40%", text: "Very tasty pasta", button: true, buttonText: "FOOD40", href: "/", img: pasta, theme:"rgba(204, 153, 0, 1)"}
-];
-
-const selectMenu = [
-    {id: 0, text: "Pantrys", active: false, href:"/"},
-    {id: 1, text: "Fruits and Vegetables", active: true, href:"/"},
-    {id: 2, text: "Eggs and Dairys", active: false, href:"/"},
-    {id: 3, text: "Frozens", active: false, href:"/"},
-    {id: 4, text: "Beverange", active: false, href:"/"},
-    {id: 5, text: "Snacks", active: false, href:"/"},
-    {id: 6, text: "Households", active: false, href:"/"},
-]
-
-export default function Mean() {
+export default function Mean({menuActive, setMenuActive}) {
     return (
         <>
-            <div className="mean-header">
-                <div className="next-icon">
+            <div className={`${!menuActive ? "full-header" : ""} mean-header`}>
+                <div className="next-icon" onClick={() => setMenuActive(!menuActive)}>
                     <span>{mean_nextIcon()}</span>
                 </div>
                 <div className="location">
@@ -140,7 +117,36 @@ export default function Mean() {
                     <div className="selectMore">More {mean_loc_selectIcon()}</div>
                 </div>
                 <div className="selected-product">
-                   
+                    <div className="product-header">
+                        <span>
+                            Fresh Fruit
+                        </span>
+                        <span>
+                            {`See all >`}
+                        </span>
+                    </div>
+                    <div className="product-mean">
+                        {
+                            productMenu.map((item, id) => {
+                                return (
+                                    <>
+                                        <div className="product-item" key={id}>
+                                            <div className="prasent">{product_prasentIcon()}</div>
+                                            <div className="product-like">{product_likeIcon()}</div>
+                                            <div className="product-img" style={{"backgroundImage" : `url(${item.img})`}}></div>
+                                            <div className="product-info">
+                                                <div className="product-title">{item.text}</div>
+                                                <div className="product-price">
+                                                    <span>{`$`}{item.price}</span>
+                                                    <span>+</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </>
+                                )
+                            })
+                        }
+                    </div>
                 </div>
             </div>
         </>

@@ -4,15 +4,15 @@
 
 
 .App {
-    position: relative;
     background-color: rgb(236, 239, 243);
     width: 100%;
-    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: row;
 }
+
 .site-menu{
-    position: absolute;
+    position: fixed;
     width: 275px;
     top: 0;
     left: 0;
@@ -21,7 +21,7 @@
     justify-content: flex-start;
     align-items: center;
     transition: 0.2s;
-
+    
     @media (max-width: 1200px) {
         &{
             display: none;
@@ -29,20 +29,31 @@
         }
     }
 }
+.site-menu-none{
+    display: none;
+}
+
 
 .site-mean{
-    position: absolute;
+    position: relative;
     width: calc(100% - 275px);
-    height: 100vh;
     transition: 0.5s;
     top: 0;
-    right: 0;
-
+    right: -275px;
+    background-color: rgb(236, 239, 243);
+    
     @media (max-width: 1200px) {
         &{
             width: 100%;
             transition: 0.5s;
             padding-left: 12px;
+            right: 0;
         }
     }
+}
+.site-mean-none{
+    width: 100%;
+    transition: 0.5s;
+    padding-left: 12px;
+    right: 0;
 }
