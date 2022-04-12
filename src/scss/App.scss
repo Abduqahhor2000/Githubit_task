@@ -57,14 +57,27 @@
     right: 0;
 }
 
-.mini-menu{
-    position: absolute;
+.backFon{
+    position:fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba($color: #000000, $alpha: 0.5);
-    z-index: 5;
+    z-index: 3;
+}
+
+.backFon-none{
+    display: none;
+}
+
+.mini-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 275px;
+    height: 100%;
+    z-index: 4;
 }
 
 .mini-menu-none{

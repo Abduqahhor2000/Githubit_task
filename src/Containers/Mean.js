@@ -4,14 +4,14 @@ import "../scss/Mean.scss"
 import banner_logo from "../png/banner_logo.png"
 import { cards, selectMenu, productMenu } from "../JSON/jsonFile";
 
-export default function Mean({menuActive, setMenuActive, setMiniMenuActive}) {
+export default function Mean({menuActive, setMenuActive, setMiniMenuActive, historyActive, setHistoryActive}) {
     return (
         <>
             <div className={`${!menuActive ? "full-header" : ""} mean-header`}>
                 <div className="next-icon" onClick={() => setMenuActive(!menuActive)}>
                     <span className={`${!menuActive ? "next-rotate" : ""}`}>{mean_nextIcon()}</span>
                 </div>
-                <div className="mini-menu" onClick={() => setMiniMenuActive(true)}>
+                <div className="mini-menu-icon" onClick={() => setMiniMenuActive(true)}>
                     <span>{menuIcon()}</span>
                 </div>
                 <div className="location">
@@ -27,7 +27,7 @@ export default function Mean({menuActive, setMenuActive, setMiniMenuActive}) {
                     />
                     <span>{mean_searchSettingIcon()}</span>
                 </div>
-                <div className="mean_date">
+                <div onClick={() => setHistoryActive(!historyActive)} className="mean_date">
                     <div>
                         <span>{mean_dateIcon()}</span>
                         <span>By 09:00 — 23:00</span>

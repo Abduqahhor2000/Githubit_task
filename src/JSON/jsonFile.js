@@ -1,3 +1,4 @@
+import {menu_helpIcon, menu_likedIcon, menu_logoutIcon, menu_orderIcon, menu_profilIcon, menu_savedIcon, menu_shopIcon, menu_viwedIcon, menu_walletIcon} from "../svg/svg-icons";
 import fruits from "../png/card_fruits.png"
 import vegetables from "../png/card_vegetable.png"
 import tomato from "../png/card_tomato.png"
@@ -35,3 +36,15 @@ export const productMenu = [
     {id: 4, text: "Lemons (Large) 8", img: lemon, price: "3.89"},
     {id: 5, text: "Calavo Hass Avocados", img: avocados, price: "5.99"},
 ]; 
+
+export const menuItems = [
+    { id: 0, distant: false, active: true, href: "/", icon: menu_shopIcon, itemName: "Stores"},
+    { id: 1, distant: false, active: false, href: "/", icon: menu_orderIcon, itemName: "Order history"},
+    { id: 2, distant: false, active: false, href: "/", icon: menu_savedIcon, itemName: "Saved stores"},
+    { id: 3, distant: false, active: false, href: "/", icon: menu_likedIcon, itemName: "Liked products"},
+    { id: 4, distant: false, active: false, href: "/", icon: menu_viwedIcon, itemName: "Viwed Products"},
+    { id: 5, distant: false, active: false, href: "/", icon: menu_walletIcon, itemName: "Wallet history"},
+    { id: 6, distant: false, active: false, href: "/", icon: menu_profilIcon, itemName: "Profil setting"},
+    { id: 7, distant: true,  active: false, href: "/", icon: menu_helpIcon, itemName: "Help center"},
+    { id: 8, distant: true,  active: false, href: "/", icon: menu_logoutIcon, itemName: "Logout"},
+];

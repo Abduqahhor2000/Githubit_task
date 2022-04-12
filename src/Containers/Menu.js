@@ -17,13 +17,12 @@ const menuItems = [
 export default function Menu({miniMenuActive, setMiniMenuActive}) {
     return (
         <>
-            <div> 
                 <div className="menu-header">
-                    <span className="menu-icon">{menuIcon()}</span>
-                    <span className="brand-name">GMarket</span>
                     {
-                        miniMenuActive ? <span onClick={() => setMiniMenuActive(false)} className="mini-menu-exit">{mean_nextIcon()}</span> : <span style={{"position": "unset"}}></span>
+                        !miniMenuActive ? <span className="menu-icon">{menuIcon()}</span> :
+                                         <span onClick={() => setMiniMenuActive(false)} className="menu-icon">{mean_nextIcon()}</span>
                     }
+                    <span className="brand-name">GMarket</span>
                 </div>
                 <div className="menu-mean">
                     <div className="user-console">
@@ -90,8 +89,6 @@ export default function Menu({miniMenuActive, setMiniMenuActive}) {
                         </div>
                     </div>
                 </div>
-            </div>
-            
         </>
     )
 }
