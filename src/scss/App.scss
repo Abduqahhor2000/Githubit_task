@@ -8,6 +8,7 @@
     width: 100%;
     height: auto;
     display: flex;
+    position: relative;
     flex-direction: row;
 }
 
@@ -20,12 +21,12 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    transition: 0.2s;
+    transition: 0.7s;
     
     @media (max-width: 1200px) {
         &{
             display: none;
-            transition: 0.2s;
+            transition: 0.7s;
         }
     }
 }
@@ -37,7 +38,7 @@
 .site-mean{
     position: relative;
     width: calc(100% - 275px);
-    transition: 0.5s;
+    transition: 0.7s;
     top: 0;
     right: -275px;
     background-color: rgb(236, 239, 243);
@@ -45,7 +46,6 @@
     @media (max-width: 1200px) {
         &{
             width: 100%;
-            transition: 0.5s;
             padding-left: 12px;
             right: 0;
         }
@@ -53,7 +53,20 @@
 }
 .site-mean-none{
     width: 100%;
-    transition: 0.5s;
     padding-left: 12px;
     right: 0;
+}
+
+.mini-menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    z-index: 5;
+}
+
+.mini-menu-none{
+    display: none;
 }

@@ -1,15 +1,18 @@
 import React from "react";
-import { mean_dateIcon, mean_deliveryIcon, mean_dottedIcon, mean_infoIcon, mean_locationIcon, mean_loc_selectIcon, mean_nextIcon, mean_recipesIcon, mean_salesIcon, mean_savedIcon, mean_searchIcon, mean_searchSettingIcon, mean_setIcon, mean_shopIcon, mean_starIcon, product_likeIcon, product_prasentIcon } from "../svg/svg-icons";
+import { mean_dateIcon, mean_deliveryIcon, mean_dottedIcon, mean_infoIcon, mean_locationIcon, mean_loc_selectIcon, mean_nextIcon, mean_recipesIcon, mean_salesIcon, mean_savedIcon, mean_searchIcon, mean_searchSettingIcon, mean_setIcon, mean_shopIcon, mean_starIcon, menuIcon, product_likeIcon, product_prasentIcon } from "../svg/svg-icons";
 import "../scss/Mean.scss"
 import banner_logo from "../png/banner_logo.png"
 import { cards, selectMenu, productMenu } from "../JSON/jsonFile";
 
-export default function Mean({menuActive, setMenuActive}) {
+export default function Mean({menuActive, setMenuActive, setMiniMenuActive}) {
     return (
         <>
             <div className={`${!menuActive ? "full-header" : ""} mean-header`}>
                 <div className="next-icon" onClick={() => setMenuActive(!menuActive)}>
-                    <span>{mean_nextIcon()}</span>
+                    <span className={`${!menuActive ? "next-rotate" : ""}`}>{mean_nextIcon()}</span>
+                </div>
+                <div className="mini-menu" onClick={() => setMiniMenuActive(true)}>
+                    <span>{menuIcon()}</span>
                 </div>
                 <div className="location">
                     <span>{mean_locationIcon()}</span>

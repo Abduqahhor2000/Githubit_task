@@ -9,13 +9,12 @@
     position: fixed;
     top: 0;
     right: 0;
-    transition: 0.5s;
+    transition: 0.7s;
     z-index: 2;
 
     @media (max-width: 1200px) {
         width: 100%;
         padding-left: 12px;
-        transition: 0.5s;
     }
 
     .next-icon{
@@ -28,8 +27,38 @@
         align-items: center;
         box-shadow: 0px 2px 2px 0px #DFE2EBC9;
 
+        @media (max-width: 1200px) {
+            display: none;
+        }
+
         span{
             margin-top: 3px;
+            transition: 0.7s;
+            position: relative;
+        }
+
+        .next-rotate{
+            transform: rotate(900deg);
+            bottom: 4px;
+        }
+    }
+
+    .mini-menu{
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        background-color: white;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 2px 2px 0px #DFE2EBC9;
+    
+        span{
+            margin-top: 3px;
+        }
+
+        @media (max-width: 1200px) {
+            display: flex;
         }
     }
 
@@ -186,7 +215,7 @@
 .full-header{
     width: 100%;
     padding-left: 12px;
-    transition: 0.5s;   
+    transition: 0.7s;   
 }
 
 .mean-banner{

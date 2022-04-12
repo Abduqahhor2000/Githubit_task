@@ -1,6 +1,6 @@
 import React from "react";
 import "../scss/Menu.scss";
-import { balansPlusIcon, menuIcon, menu_helpIcon, menu_likedIcon, menu_logoutIcon, menu_orderIcon, menu_profilIcon, menu_savedIcon, menu_shopIcon, menu_viwedIcon, menu_walletIcon, shareWalletIcon, userClockIcon, userSetIcon } from "../svg/svg-icons";
+import { balansPlusIcon, mean_nextIcon, menuIcon, menu_helpIcon, menu_likedIcon, menu_logoutIcon, menu_orderIcon, menu_profilIcon, menu_savedIcon, menu_shopIcon, menu_viwedIcon, menu_walletIcon, shareWalletIcon, userClockIcon, userSetIcon } from "../svg/svg-icons";
 
 const menuItems = [
     { id: 0, distant: false, active: true, href: "/", icon: menu_shopIcon, itemName: "Stores"},
@@ -14,13 +14,16 @@ const menuItems = [
     { id: 8, distant: true,  active: false, href: "/", icon: menu_logoutIcon, itemName: "Logout"},
 ];
 
-export default function Menu() {
+export default function Menu({miniMenuActive, setMiniMenuActive}) {
     return (
         <>
             <div> 
                 <div className="menu-header">
                     <span className="menu-icon">{menuIcon()}</span>
                     <span className="brand-name">GMarket</span>
+                    {
+                        miniMenuActive ? <span onClick={() => setMiniMenuActive(false)} className="mini-menu-exit">{mean_nextIcon()}</span> : <span style={{"position": "unset"}}></span>
+                    }
                 </div>
                 <div className="menu-mean">
                     <div className="user-console">
