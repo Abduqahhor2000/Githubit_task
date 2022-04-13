@@ -34,8 +34,8 @@ function App() {
           onClick={() => setMiniMenuActive(false)}
           className={`${miniMenuActive ? "backFon" : "backFon-none"} `}>
       </div>
-      <div className={`${miniMenuActive ? "mini-menu" : "mini-menu-none"}`}> 
-        <div>
+      <div className={`mini-menu ${miniMenuActive ? "" : "mini-menu-none"}`}> 
+        <div className='mini-menu-fon'>
           <Menu 
               miniMenuActive={miniMenuActive}
               setMiniMenuActive={setMiniMenuActive}
@@ -48,13 +48,11 @@ function App() {
           onClick={() => setHistoryActive(false)} 
           className={`${historyActive ? "backFon" : "backFon-none"}`}>
       </div>
-      <div className={`${historyActive ? "history" : "history-none"}`}> 
-        <div>
+      <div className={`history ${historyActive ? "" : "history-none"}`}> 
           <History 
               historyActive={historyActive}
               setHistoryActive={setHistoryActive}
           /> 
-        </div>
       </div>
     </div>
   );

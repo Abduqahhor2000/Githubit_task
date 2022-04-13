@@ -73,13 +73,59 @@
 
 .mini-menu{
     position: fixed;
-    top: 0;
+    top: -12px;
     left: 0;
     width: 275px;
     height: 100%;
     z-index: 4;
+    transition: 0.7s;
+    padding-top: 12px;
+
+    .mini-menu-fon{
+        background-color: rgb(236, 239, 243);
+        padding-top: 12px;
+
+        .menu-header{
+            margin-top: 0;
+        }
+    }
 }
 
 .mini-menu-none{
-    display: none;
+    top: -12px;
+    left: -300px;
+    transition: 0.7s;
+}
+
+.history{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    z-index: 4;
+    background-color: white;
+    transition: 0.7s;
+    overflow-y: auto;
+    overflow-x: unset;
+
+    &::-webkit-scrollbar-track{
+    	display: none;
+    }
+    
+    &::-webkit-scrollbar
+    {
+    	display: none;
+    }
+    
+    &::-webkit-scrollbar-thumb
+    {
+    	display: none;
+    }
+}
+
+.history-none{
+    top:0;
+    right: -500px;
+    transition: 0.7s;
 }

@@ -1,18 +1,12 @@
 import React from "react";
 import "../scss/Menu.scss";
-import { balansPlusIcon, mean_nextIcon, menuIcon, menu_helpIcon, menu_likedIcon, menu_logoutIcon, menu_orderIcon, menu_profilIcon, menu_savedIcon, menu_shopIcon, menu_viwedIcon, menu_walletIcon, shareWalletIcon, userClockIcon, userSetIcon } from "../svg/svg-icons";
-
-const menuItems = [
-    { id: 0, distant: false, active: true, href: "/", icon: menu_shopIcon, itemName: "Stores"},
-    { id: 1, distant: false, active: false, href: "/", icon: menu_orderIcon, itemName: "Order history"},
-    { id: 2, distant: false, active: false, href: "/", icon: menu_savedIcon, itemName: "Saved stores"},
-    { id: 3, distant: false, active: false, href: "/", icon: menu_likedIcon, itemName: "Liked products"},
-    { id: 4, distant: false, active: false, href: "/", icon: menu_viwedIcon, itemName: "Viwed Products"},
-    { id: 5, distant: false, active: false, href: "/", icon: menu_walletIcon, itemName: "Wallet history"},
-    { id: 6, distant: false, active: false, href: "/", icon: menu_profilIcon, itemName: "Profil setting"},
-    { id: 7, distant: true,  active: false, href: "/", icon: menu_helpIcon, itemName: "Help center"},
-    { id: 8, distant: true,  active: false, href: "/", icon: menu_logoutIcon, itemName: "Logout"},
-];
+import { menuItems } from "../JSON/jsonFile";
+import { balansPlusIcon,
+         mean_nextIcon, 
+         menuIcon, 
+         shareWalletIcon, 
+         userClockIcon, 
+         userSetIcon } from "../svg/svg-icons";
 
 export default function Menu({miniMenuActive, setMiniMenuActive}) {
     return (

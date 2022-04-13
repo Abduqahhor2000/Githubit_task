@@ -1,0 +1,112 @@
+.date-component{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
+    .date-exit-icon{
+        position: absolute;
+        top: 35px;
+        right: 35px;
+    }
+
+    .date-header{
+        font-size: 22px;
+        font-weight: 500;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .date-calendar{
+        width: 100%;
+
+        .rlc-calendar{
+            width: 100%;
+            border: none;
+            box-shadow: none;
+
+            .rlc-details{
+                display: none;
+            }
+            
+            .rlc-month-and-year-wrapper{
+                font-weight: 600;
+                font-size: 16px;
+                border-top: none;
+
+                .rlc-navigation-button{
+                    width: 30px;
+                    padding: 0 10px;
+                }
+            }
+
+            .rlc-days-label{
+                display: flex;
+                justify-content: space-between;
+
+                .rlc-day-label{
+                    font-weight: 600;
+                    font-size: 14px;
+                }
+            }
+
+            .rlc-days{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                font-size: 14px;
+                font-weight: 600;
+
+                div:nth-child(n){
+                    margin-bottom: 5px;
+                    width: 43px;
+                }
+
+                .rlc-day-disabled{
+                    border-radius: 50%;
+                }
+
+                .rlc-day-marked:after{
+                    margin-top: 22px;
+                    background-color: #FFB800;
+                }
+            }
+        }
+    }
+
+    .history-items{
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        
+
+        .history-item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 340px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: #F8F8F8;
+            padding: 0 15px;
+            margin-bottom: 6px;
+            
+            span:nth-child(1){
+                position: relative;
+                margin-left: 15px;
+
+                &::after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 5px;
+                    left: -15px;
+                    background-color: #45A524;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;               }
+            }
+
+        }
+    }
+}

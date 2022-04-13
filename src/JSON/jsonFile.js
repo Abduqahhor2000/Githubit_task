@@ -48,3 +48,15 @@ export const menuItems = [
     { id: 7, distant: true,  active: false, href: "/", icon: menu_helpIcon, itemName: "Help center"},
     { id: 8, distant: true,  active: false, href: "/", icon: menu_logoutIcon, itemName: "Logout"},
 ];
+
+export const history_items = [
+    {id: 0, dayAndMooth: "10 October", href: "/", time: "8:00 AM — 9:00 AM"},
+    {id: 9, dayAndMooth: "10 October", href: "/", time: "9:00 AM — 10:00 AM"},
+    {id: 0, dayAndMooth: "10 October", href: "/", time: "10:00 AM — 11:00 AM"},
+    {id: 0, dayAndMooth: "10 October", href: "/", time: "11:00 AM — 12:00 AM"},
+    {id: 0, dayAndMooth: "10 October", href: "/", time: "12:00 AM — 13:00 AM"},
+    {id: 0, dayAndMooth: "10 October", href: "/", time: "13:00 AM — 14:00 AM"},
+    {id: 0, dayAndMooth: "10 October", href: "/", time: "14:00 AM — 15:00 AM"},
+    {id: 0, dayAndMooth: "10 October", href: "/", time: "15:00 AM — 16:00 AM"},
+    {id: 0, dayAndMooth: "10 October", href: "/", time: "16:00 AM — 17:00 AM"},
+]

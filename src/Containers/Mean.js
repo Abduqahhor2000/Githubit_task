@@ -90,7 +90,7 @@ export default function Mean({menuActive, setMenuActive, setMiniMenuActive, hist
                     cards.map((item, id) => {
                         return(
                             <>
-                                <div className="card" style={{"backgroundColor" : `${item.theme}`, "boxShadow" : `0px 50px 50px -50px ${item.theme}`}} key={id}>
+                                <div style={{"backgroundColor" : `${item.theme}`, "boxShadow" : `0px 50px 50px -50px ${item.theme}`}} key={id} className="card">
                                     <div className="card-title">
                                         <span>{item.name}</span>
                                         <span>{item.text}</span>
