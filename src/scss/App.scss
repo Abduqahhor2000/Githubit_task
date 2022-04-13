@@ -109,6 +109,10 @@
     overflow-y: auto;
     overflow-x: unset;
 
+    @media (max-width: 450px) {
+        width: 300px;
+    }
+
     &::-webkit-scrollbar-track{
     	display: none;
     }

@@ -13,7 +13,7 @@ export default function Mean({menuActive, setMenuActive, setMiniMenuActive, hist
                 </div>
                 <div className="mini-menu-icon" onClick={() => setMiniMenuActive(true)}>
                     <span>{menuIcon()}</span>
-                </div>
+                </div> 
                 <div className="location">
                     <span>{mean_locationIcon()}</span>
                     <span>2972 Westheimer Rd. Santa Ana</span>
@@ -27,6 +27,16 @@ export default function Mean({menuActive, setMenuActive, setMiniMenuActive, hist
                     />
                     <span>{mean_searchSettingIcon()}</span>
                 </div>
+                <div className="header-banner-mini">
+                    <div className="header-shop">
+                        <span>{mean_shopIcon()}</span>
+                        <span>Shop</span>
+                    </div>
+                    <div className="header-recipes">
+                        <span>{mean_recipesIcon()}</span>
+                        <span>Recipes</span>
+                    </div>
+                </div>
                 <div onClick={() => setHistoryActive(!historyActive)} className="mean_date">
                     <div>
                         <span>{mean_dateIcon()}</span>
@@ -36,6 +46,22 @@ export default function Mean({menuActive, setMenuActive, setMiniMenuActive, hist
                 <div className="mean-sales">
                     <span>{mean_salesIcon()}</span>
                     <span>$230.80</span>
+                </div>
+                <div className="new-header">
+                    <div className="mean_search">
+                        <span>{mean_searchIcon()}</span>
+                        <input
+                            type="text"
+                            placeholder="Search products in Wallmart"
+                        />
+                        <span>{mean_searchSettingIcon()}</span>
+                    </div>
+                    <div onClick={() => setHistoryActive(!historyActive)} className="mean_date">
+                        <div>
+                            <span>{mean_dateIcon()}</span>
+                            <span>By 09:00 — 23:00</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="mean-banner">
@@ -68,10 +94,37 @@ export default function Mean({menuActive, setMenuActive, setMiniMenuActive, hist
                                 <span>Saved</span>
                             </span>
                         </div>
+ 
                         <span className="star-icon">
                             <span>{mean_starIcon()}</span>
                             <span>4.5</span>
                         </span>
+
+                        <div className="text-row-mini">
+                            <span className="havai">
+                                <span>Wallmart store</span> 
+                                <span className="star-icon-mini">
+                                    <span>{mean_starIcon()}</span>
+                                    <span>4.5</span>
+                                </span>
+                            </span>
+                            <span className="mindri">
+                                <span>
+                                    <span>{mean_infoIcon()}</span>
+                                    <span>Store info</span>
+                                </span>
+    
+                                <span>
+                                    <span>{mean_deliveryIcon()}</span>
+                                    <span>Store delivery time</span>
+                                </span>
+
+                                <span>
+                                    <span>{mean_savedIcon()}</span>
+                                    <span>Saved</span>
+                                </span>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div className="banner-mini">
